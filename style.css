@@ -21,6 +21,16 @@ body {
     z-index: 100;
 }
 
+.flip-in {
+    animation: flipInX forwards;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 7.5s;
+}
+
+.delay-8 {
+    animation-delay: 8s;
+}
 
 .star {
     position: relative;
@@ -71,7 +81,7 @@ body {
     animation: fadeIn forwards;
     opacity: 0;
     animation-duration: 2s;
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
 }
 
 .star-red:before,
@@ -274,6 +284,23 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes flipInX {
+    0% {
+       transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+       transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+       transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ } 
 
 .zvezda-shape__bottom {
     border: 9px solid;
